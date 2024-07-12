@@ -1,0 +1,10 @@
+{
+    "name": "umbrellamx_backend",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "dependencies": {
+        "azle": "^0.22.0",
+        "express": "^4.19.2"
+    }
+}
