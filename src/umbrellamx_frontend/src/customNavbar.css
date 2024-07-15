@@ -58,18 +58,25 @@
     transition: color 0.3s ease, transform 0.3s;
 }
 
-.white-bg {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-    animation: fadeIn 1.5s ease-in-out;
-    transition: box-shadow 0.3s ease;
+.auth-button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 4px;
 }
 
-.white-bg:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.auth-button:hover {
+    background-color: #004085;
+    transform: scale(1.05);
+}
+
+.login-button-container {
+    text-align: center;
+    margin-top: 10px;
 }
 
 @keyframes fadeIn {
@@ -117,21 +124,17 @@
     }
 }
 
-.auth-button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    border-radius: 4px;
+/* Estilo específico para componentes con fondo blanco */
+.white-bg {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: box-shadow 0.3s ease;
 }
 
-.auth-button:hover {
-    background-color: #004085;
-    transform: scale(1.05);
-}
-.white-bg {
-    background-color: transparent !important;
+.white-bg:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

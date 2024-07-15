@@ -1,20 +1,18 @@
+import React from 'react';
 import { Client, InternetIdentity } from '@bundly/ic-core-js';
 import { IcpConnectContextProvider } from '@bundly/ic-react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Home } from './Home';
 import { AboutUs } from './quesomos';
 
 export default function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: '/',
       element: <AboutUs />,
     },
     {
-      path: "/datos",
+      path: '/datos',
       element: <Home />,
     },
   ]);
@@ -22,8 +20,8 @@ export default function App() {
   const client = Client.create({
     restCanisters: {
       backend: {
-        baseUrl: process.env.REACT_APP_API_REST_URL
-      }
+        baseUrl: process.env.REACT_APP_API_REST_URL,
+      },
     },
     providers: [
       new InternetIdentity({
@@ -33,8 +31,8 @@ export default function App() {
   });
 
   return (
-    <IcpConnectContextProvider client={client}>
+    <IcpConnectContextProvider client={client} identityProvider={InternetIdentity}>
       <RouterProvider router={router} />
     </IcpConnectContextProvider>
-  )
+  );
 }

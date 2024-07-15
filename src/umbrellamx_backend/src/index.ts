@@ -10,6 +10,7 @@ export default Server(() => {
         }
     ]
     const app = express();
+    
 
     app.post('/atrapar-datos', (req, res) => {
         const body = req.body;
